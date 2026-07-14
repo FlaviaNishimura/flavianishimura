@@ -1,0 +1,559 @@
+---
+---
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="Gokigen Time by Flavia Nishimura — books, recipes, garden and slow living from Tainai, Japan."
+    />
+
+    <title>GO • KI • GEN TIME | Flavia Nishimura</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+     
+        .menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 36px;
+  white-space: nowrap;
+}
+
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .menu a:hover {
+        color: var(--orange);
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 140px 30px 90px;
+        text-align: center;
+      }
+
+      .hero-inner {
+        width: min(100%, 1100px);
+      }
+
+      .eyebrow {
+        margin-bottom: 34px;
+        font-size: 11px;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--orange);
+      }
+
+      .brand {
+        margin: 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(58px, 10vw, 138px);
+        font-weight: 400;
+        line-height: 0.82;
+        letter-spacing: 0.08em;
+      }
+
+      .brand-time {
+        display: block;
+        margin-top: 34px;
+        padding-left: 0.55em;
+        font-family: "Inter", sans-serif;
+        font-size: clamp(15px, 2vw, 24px);
+        font-weight: 300;
+        letter-spacing: 0.55em;
+      }
+
+      .hero-description {
+        width: min(100%, 570px);
+        margin: 62px auto 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(23px, 3vw, 34px);
+        line-height: 1.3;
+      }
+
+      .hero-signature {
+        margin-top: 28px;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        color: var(--muted);
+      }
+
+      .hero-actions {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        margin-top: 48px;
+      }
+
+      .button {
+        display: inline-block;
+        min-width: 180px;
+        padding: 16px 24px;
+        border: 1px solid var(--ink);
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.25s ease;
+      }
+
+      .button-primary {
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      .button:hover {
+        background: var(--orange);
+        border-color: var(--orange);
+        color: white;
+      }
+
+      .language-line {
+        margin-top: 54px;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+      }
+
+      .language-line a {
+        margin: 0 15px;
+        text-decoration: none;
+      }
+
+      .section {
+        padding: 120px 46px;
+        border-top: 1px solid var(--line);
+      }
+
+      .section-inner {
+        width: min(100%, 1180px);
+        margin: 0 auto;
+      }
+
+      .section-number {
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        color: var(--orange);
+      }
+
+      .section-title {
+        margin: 18px 0 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(48px, 7vw, 92px);
+        font-weight: 400;
+        line-height: 0.9;
+      }
+
+      .section-intro {
+        max-width: 610px;
+        margin-top: 34px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        line-height: 1.45;
+        color: #514b43;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 64px;
+      }
+
+      .card {
+        min-height: 310px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 32px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        text-decoration: none;
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: var(--orange);
+      }
+
+      .card-label {
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--orange);
+      }
+
+      .card-title {
+        margin-top: 18px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      .card-text {
+        margin-top: 20px;
+        font-size: 14px;
+ :
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: "Inter", sans-serif;
+        font-weight: 300;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .site-header {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 46px;
+        background: rgba(246, 241, 231, 0.92);
+        border-bottom: 1px solid rgba(38, 35, 31, 0.08);
+        backdrop-filter: blur(12px);
+      }
+
+      .logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 22px;
+        letter-spacing: 0.18em;
+        text-decoration: none;
+:root{
+  --cream:#FAF8F3;
+  --paper:#F8F5EF;
+  --ink:#4A433C;
+  --muted:#766F68;
+  --line:#DDD6CC;
+  --accent:#A56A4D;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"Inter",sans-serif;
+  font-weight:300;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.site-header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:24px 48px;
+  background:rgba(250,248,243,.88);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+
+.logo{
+  font-family:"Cormorant Garamond",serif;
+  font-size:22px;
+  letter-spacing:.22em;
+}
+
+        .menu {
+          display: flex;
+        }
+
+        .hero {
+          min-height: 92vh;
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+
+        .brand {
+          font-size: clamp(50px, 15vw, 84px);
+          line-height: 0.9;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .button {
+          width: min(100%, 280px);
+        }
+
+        .section {
+          padding: 88px 22px;
+        }
+
+        .cards {
+          grid-template-columns: 1fr;
+        }
+
+        .about {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        footer {
+          flex-direction: column;
+          padding: 28px 22px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#top">GO • KI • GEN</a>
+
+      <nav class="menu">
+        <a href="/library">Library</a>
+        <a href="#world">World</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="eyebrow">A new memory unfolding</div>
+
+          <h1 class="brand">
+            GO • KI • GEN
+            <span class="brand-time">TIME</span>
+          </h1>
+
+          <p class="hero-description">
+            Books, recipes, gardens and stories created slowly in Tainai, Japan
+          </p>
+
+          <div class="hero-signature">by Flavia Nishimura</div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="/library">
+              Discover the book
+            </a>
+
+            <a class="button" href="#world">
+              Enter the world
+            </a>
+          </div>
+
+          <div class="language-line">
+            <a href="/ja">日本語</a>
+            <span>｜</span>
+            <a href="/pt">Português</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="library">
+        <div class="section-inner">
+          <div class="section-number">01 — Library</div>
+
+          <h2 class="section-title">
+            Stories made<br />
+            to be kept
+          </h2>
+
+          <p class="section-intro">
+            A growing collection of books about food, seasons, gardens and the
+            quiet beauty found in everyday life
+          </p>
+
+          <div class="cards">
+            <article class="card">
+              <div class="card-label">Coming soon</div>
+
+              <div class="card-title">
+                Recipes<br />
+                for One
+              </div>
+
+              <div class="card-text">
+                Elegant single-serving desserts created with care, simplicity
+                and the Japanese spirit of mottainai
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-label">Future collection</div>
+
+              <div class="card-title">
+                Kuma<br />
+                Garden
+              </div>
+
+              <div class="card-text">
+                A premium art and coloring book inspired by a real garden
+                through the seasons
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-label">Journal</div>
+
+              <div class="card-title">
+                Seasonal<br />
+                Stories
+              </div>
+
+              <div class="card-text">
+                Recipes, places, flowers and memories from life in the Japanese
+                countryside
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="world">
+        <div class="section-inner">
+          <div class="section-number">02 — The Gokigen World</div>
+
+          <h2 class="section-title">
+            Food, garden<br />
+            and slow living
+          </h2>
+
+          <div class="cards">
+            <article class="card">
+              <div class="card-label">Food</div>
+
+              <div class="card-title">
+                Recipes
+              </div>
+
+              <div class="card-text">
+                Desserts, breads and seasonal dishes created in the Kuma Café
+                kitchen
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-label">Garden</div>
+
+              <div class="card-title">
+                Flowers & Seasons
+              </div>
+
+              <div class="card-text">
+                Roses, peonies, hydrangeas and the changing landscape of
+                Niigata
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-label">Place</div>
+
+              <div class="card-title">
+                Kuma Café
+              </div>
+
+              <div class="card-text">
+                A dog-friendly kominka café surrounded by mountains in Tainai,
+                Japan
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-inner about">
+          <div>
+            <div class="section-number">03 — About</div>
+
+            <div class="about-name">
+              Flavia<br />
+              Nishimura
+            </div>
+          </div>
+
+          <div>
+            <div class="about-text">
+              Chef, baker, gardener and storyteller creating a world where food,
+              nature and memory meet
+            </div>
+
+            <div class="about-small">
+              Based in Tainai, Niigata, Flavia is the founder of Kuma Café and
+              the creator of Gokigen Time. Her work connects Brazilian warmth,
+              Japanese seasons and the beauty of living with intention.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-box" id="contact">
+        <h2>Let’s stay in touch</h2>
+
+        <p>
+          For book news, collaborations, press, events and stories from Tainai
+        </p>
+
+        <a class="button" href="mailto:hello@flavianishimura.com">
+          Contact
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <span>GO • KI • GEN TIME</span>
+      <span>Created in Tainai, Japan</span>
+      <span>© 2026 Flavia Nishimura</span>
+    </footer>
+  </body>
+</html>
