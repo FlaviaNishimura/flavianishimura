@@ -1,6 +1,7 @@
 ---
 ---
 
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -12,27 +13,33 @@
 
     <meta
       name="description"
-      content="GO・KI・GEN TIME — フラヴィア・ニシムラが新潟県胎内市から届ける、本、レシピ、庭、季節の物語。"
+      content="GO・KI・GEN TIME — フラヴィア・ニシムラの料理、庭、暮らしの物語。"
     />
 
-    <title>GO • KI • GEN TIME | フラヴィア・ニシムラ</title>
+    <title>GO・KI・GEN TIME | フラヴィア・ニシムラ</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap"
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
 
     <style>
       :root {
-        --cream: #faf8f3;
-        --paper: #f8f5ef;
-        --ink: #4a433c;
-        --muted: #766f68;
-        --line: #ddd6cc;
+        --cream: #faf7f1;
+        --paper: #fffdf8;
+        --ink: #4a332c;
+        --muted: #806f68;
+        --line: #ddd0c6;
         --accent: #a56a4d;
+        --accent-soft: #efe2d8;
       }
 
       * {
@@ -49,11 +56,17 @@
         color: var(--ink);
         font-family: "Noto Sans JP", sans-serif;
         font-weight: 300;
+        line-height: 1.8;
       }
 
       a {
         color: inherit;
         text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
       }
 
       .site-header {
@@ -65,317 +78,529 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 24px 46px;
-        background: rgba(250, 248, 243, 0.92);
-        border-bottom: 1px solid var(--line);
+        padding: 22px 48px;
+        background: rgba(250, 247, 241, 0.93);
+        border-bottom: 1px solid rgba(221, 208, 198, 0.8);
         backdrop-filter: blur(12px);
       }
 
       .logo {
         font-family: "Cormorant Garamond", serif;
         font-size: 22px;
+        font-weight: 600;
         letter-spacing: 0.18em;
+        white-space: nowrap;
       }
 
       .menu {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        gap: 36px;
-        white-space: nowrap;
+        gap: 30px;
       }
 
       .menu a {
         font-size: 11px;
+        font-weight: 400;
         letter-spacing: 0.14em;
         text-transform: uppercase;
+        transition: opacity 0.2s ease;
       }
 
       .menu a:hover {
-        color: var(--accent);
+        opacity: 0.55;
       }
 
       .hero {
+        display: flex;
         min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 140px 30px 90px;
+        align-items: center;
+        justify-content: center;
+        padding: 150px 30px 90px;
         text-align: center;
       }
 
       .hero-inner {
-        width: min(100%, 1100px);
+        width: min(100%, 1000px);
       }
 
       .eyebrow {
-        margin-bottom: 34px;
+        margin: 0 0 22px;
+        color: var(--muted);
         font-size: 11px;
+        font-weight: 400;
         letter-spacing: 0.3em;
-        color: var(--accent);
+        text-transform: uppercase;
       }
 
       .brand {
+        display: block;
         margin: 0;
         font-family: "Cormorant Garamond", serif;
         font-size: clamp(58px, 10vw, 138px);
         font-weight: 400;
-        line-height: 0.82;
         letter-spacing: 0.08em;
+        line-height: 0.82;
       }
 
       .brand-time {
         display: block;
         margin-top: 34px;
-        padding-left: 0.55em;
-        font-family: "Noto Sans JP", sans-serif;
-        font-size: clamp(15px, 2vw, 24px);
-        font-weight: 300;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(26px, 4vw, 54px);
+        font-weight: 400;
         letter-spacing: 0.55em;
+        line-height: 1;
       }
 
       .hero-description {
         width: min(100%, 620px);
-        margin: 62px auto 0;
-        font-family: "Noto Serif JP", serif;
-        font-size: clamp(22px, 3vw, 32px);
-        line-height: 1.8;
+        margin: 52px auto 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 2.15;
       }
 
       .hero-signature {
-        margin-top: 28px;
-        font-size: 12px;
+        margin-top: 30px;
+        color: var(--accent);
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
         letter-spacing: 0.16em;
-        color: var(--muted);
       }
 
       .hero-actions {
         display: flex;
         justify-content: center;
         gap: 14px;
-        margin-top: 48px;
+        margin-top: 42px;
+        flex-wrap: wrap;
       }
 
       .button {
-        display: inline-block;
-        min-width: 190px;
-        padding: 16px 24px;
+        display: inline-flex;
+        min-width: 180px;
+        min-height: 50px;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 24px;
         border: 1px solid var(--ink);
         font-size: 11px;
-        letter-spacing: 0.13em;
-        transition: 0.25s ease;
+        font-weight: 400;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        transition:
+          background 0.25s ease,
+          color 0.25s ease;
       }
 
-      .button-primary {
+      .button:hover {
         background: var(--ink);
         color: var(--paper);
       }
 
-      .button:hover {
-        background: var(--accent);
-        border-color: var(--accent);
-        color: white;
-      }
-
-      .language-line {
-        margin-top: 54px;
-        font-size: 12px;
-        letter-spacing: 0.1em;
-        color: var(--muted);
-      }
-
-      .language-line a {
-        margin: 0 15px;
+      .button-soft {
+        border-color: var(--line);
+        background: var(--paper);
       }
 
       .section {
-        padding: 120px 46px;
-        border-top: 1px solid var(--line);
+        padding: 120px 30px;
       }
 
       .section-inner {
-        width: min(100%, 1180px);
+        width: min(100%, 1100px);
         margin: 0 auto;
       }
 
+      .section-heading {
+        margin-bottom: 64px;
+        text-align: center;
+      }
+
       .section-number {
-        font-size: 11px;
+        display: block;
+        margin-bottom: 16px;
+        color: var(--accent);
+        font-family: "Cormorant Garamond", serif;
+        font-size: 16px;
         letter-spacing: 0.18em;
-        color: var(--accent);
       }
 
-      .section-title {
-        margin: 22px 0 0;
-        font-family: "Noto Serif JP", serif;
-        font-size: clamp(42px, 6vw, 78px);
-        font-weight: 300;
-        line-height: 1.35;
+      .section-heading h2 {
+        margin: 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(42px, 6vw, 72px);
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        line-height: 1;
       }
 
-      .section-intro {
-        max-width: 650px;
-        margin-top: 34px;
-        font-family: "Noto Serif JP", serif;
-        font-size: 23px;
-        line-height: 1.9;
-        color: #594f47;
-      }
-
-      .cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        margin-top: 64px;
-      }
-
-      .card {
-        min-height: 330px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 32px;
-        background: var(--paper);
-        border: 1px solid var(--line);
-        transition:
-          transform 0.25s ease,
-          border-color 0.25s ease;
-      }
-
-      .card:hover {
-        transform: translateY(-6px);
-        border-color: var(--accent);
-      }
-
-      .card-label {
-        font-size: 10px;
-        letter-spacing: 0.16em;
-        color: var(--accent);
-      }
-
-      .card-title {
-        margin-top: 18px;
-        font-family: "Noto Serif JP", serif;
-        font-size: 31px;
-        font-weight: 300;
-        line-height: 1.45;
-      }
-
-      .card-text {
-        margin-top: 20px;
+      .section-heading p {
+        width: min(100%, 600px);
+        margin: 24px auto 0;
+        color: var(--muted);
         font-size: 13px;
         line-height: 2;
-        color: var(--muted);
       }
 
-      .about {
+      .story {
+        background: var(--paper);
+      }
+
+      .story-grid {
         display: grid;
-        grid-template-columns: 0.8fr 1.2fr;
-        gap: 80px;
-        align-items: start;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 90px;
+      }
+
+      .story-visual {
+        display: flex;
+        min-height: 520px;
+        align-items: center;
+        justify-content: center;
+        padding: 55px;
+        background:
+          linear-gradient(
+            145deg,
+            rgba(165, 106, 77, 0.18),
+            rgba(239, 226, 216, 0.4)
+          );
+      }
+
+      .story-mark {
+        color: var(--accent);
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(72px, 10vw, 130px);
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        line-height: 0.85;
+        text-align: center;
+      }
+
+      .story-text .eyebrow {
+        margin-bottom: 20px;
+      }
+
+      .story-text h2 {
+        margin: 0 0 28px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(40px, 5vw, 68px);
+        font-weight: 400;
+        line-height: 1.05;
+      }
+
+      .story-text p {
+        margin: 0 0 20px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 2.15;
+      }
+
+      .library {
+        background: var(--cream);
+      }
+
+      .book-card {
+        display: grid;
+        grid-template-columns: minmax(280px, 0.85fr) minmax(300px, 1.15fr);
+        overflow: hidden;
+        background: var(--paper);
+        border: 1px solid var(--line);
+      }
+
+      .book-cover {
+        display: flex;
+        min-height: 620px;
+        align-items: center;
+        justify-content: center;
+        padding: 52px;
+        background:
+          radial-gradient(
+            circle at top left,
+            rgba(255, 255, 255, 0.8),
+            transparent 45%
+          ),
+          linear-gradient(145deg, #ead8c9, #c99676);
+      }
+
+      .cover-inner {
+        display: flex;
+        width: min(100%, 330px);
+        aspect-ratio: 0.72;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 44px 34px;
+        background: #f9f1e8;
+        border: 1px solid rgba(74, 51, 44, 0.22);
+        box-shadow: 0 28px 60px rgba(74, 51, 44, 0.18);
+        text-align: center;
+      }
+
+      .cover-small {
+        font-size: 9px;
+        font-weight: 400;
+        letter-spacing: 0.23em;
+        text-transform: uppercase;
+      }
+
+      .cover-title {
+        margin: auto 0;
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: clamp(25px, 3vw, 38px);
+        font-weight: 300;
+        letter-spacing: 0.12em;
+        line-height: 1.75;
+      }
+
+      .cover-author {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 15px;
+        letter-spacing: 0.12em;
+      }
+
+      .book-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 70px;
+      }
+
+      .book-label {
+        margin-bottom: 18px;
+        color: var(--accent);
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .book-content h3 {
+        margin: 0 0 28px;
+        font-size: clamp(27px, 4vw, 44px);
+        font-weight: 300;
+        letter-spacing: 0.06em;
+        line-height: 1.55;
+      }
+
+      .book-content p {
+        margin: 0 0 20px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 2.15;
+      }
+
+      .book-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin: 32px 0 38px;
+        padding: 26px 0;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .book-detail span {
+        display: block;
+      }
+
+      .detail-label {
+        margin-bottom: 5px;
+        color: var(--muted);
+        font-size: 9px;
+        font-weight: 400;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .detail-value {
+        font-size: 13px;
+      }
+
+      .book-actions {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .philosophy {
+        background: var(--accent-soft);
+        text-align: center;
+      }
+
+      .quote {
+        width: min(100%, 850px);
+        margin: 0 auto;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(38px, 6vw, 74px);
+        font-weight: 400;
+        line-height: 1.15;
+      }
+
+      .quote-japanese {
+        width: min(100%, 600px);
+        margin: 36px auto 0;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.08em;
+        line-height: 2.2;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        align-items: center;
+        gap: 90px;
       }
 
       .about-name {
-        margin-top: 20px;
         font-family: "Cormorant Garamond", serif;
-        font-size: clamp(48px, 6vw, 78px);
+        font-size: clamp(48px, 7vw, 86px);
+        font-weight: 400;
         line-height: 0.95;
       }
 
-      .about-text {
-        font-family: "Noto Serif JP", serif;
-        font-size: 25px;
-        line-height: 2;
-      }
-
-      .about-small {
-        margin-top: 30px;
-        font-size: 14px;
-        line-height: 2;
+      .about-text p {
+        margin: 0 0 20px;
         color: var(--muted);
+        font-size: 14px;
+        line-height: 2.15;
       }
 
-      .contact-box {
-        padding: 90px 40px;
+      .footer {
+        padding: 70px 30px 40px;
         background: var(--ink);
         color: var(--paper);
         text-align: center;
       }
 
-      .contact-box h2 {
-        margin: 0;
-        font-family: "Noto Serif JP", serif;
-        font-size: clamp(42px, 6vw, 74px);
-        font-weight: 300;
+      .footer-logo {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(35px, 5vw, 56px);
+        letter-spacing: 0.14em;
       }
 
-      .contact-box p {
-        max-width: 560px;
-        margin: 26px auto 38px;
-        font-size: 14px;
-        line-height: 2;
-        color: #d8d1c8;
-      }
-
-      .contact-box .button {
-        border-color: var(--paper);
-        color: var(--paper);
-      }
-
-      footer {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 32px 46px;
-        border-top: 1px solid var(--line);
-        font-size: 10px;
+      .footer-text {
+        margin: 22px auto 0;
+        color: rgba(255, 253, 248, 0.7);
+        font-size: 11px;
         letter-spacing: 0.12em;
-        color: var(--muted);
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 28px;
+        margin-top: 32px;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .copyright {
+        margin-top: 55px;
+        color: rgba(255, 253, 248, 0.45);
+        font-size: 9px;
+        letter-spacing: 0.12em;
       }
 
       @media (max-width: 850px) {
         .site-header {
-          padding: 20px 22px;
+          padding: 19px 22px;
+        }
+
+        .logo {
+          font-size: 17px;
         }
 
         .menu {
+          gap: 15px;
+        }
+
+        .menu a {
+          font-size: 9px;
+        }
+
+        .menu a:nth-child(2) {
           display: none;
         }
 
         .hero {
-          min-height: 92vh;
-          padding-right: 20px;
-          padding-left: 20px;
+          padding-top: 135px;
         }
 
-        .brand {
-          font-size: clamp(50px, 15vw, 84px);
-          line-height: 0.9;
+        .story-grid,
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 50px;
         }
 
-        .hero-actions {
-          flex-direction: column;
-          align-items: center;
+        .story-visual {
+          min-height: 390px;
         }
 
-        .button {
+        .book-card {
+          grid-template-columns: 1fr;
+        }
+
+        .book-cover {
+          min-height: auto;
+          padding: 48px 26px;
+        }
+
+        .cover-inner {
           width: min(100%, 280px);
         }
 
+        .book-content {
+          padding: 48px 30px;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .site-header {
+          align-items: center;
+        }
+
+        .menu {
+          gap: 12px;
+        }
+
+        .menu a {
+          font-size: 8px;
+          letter-spacing: 0.08em;
+        }
+
+        .brand {
+          font-size: 56px;
+        }
+
+        .brand-time {
+          margin-top: 25px;
+          font-size: 25px;
+          letter-spacing: 0.35em;
+        }
+
+        .hero-description {
+          font-size: 13px;
+        }
+
         .section {
-          padding: 88px 22px;
+          padding: 90px 20px;
         }
 
-        .cards {
+        .book-details {
           grid-template-columns: 1fr;
+          gap: 18px;
         }
 
-        .about {
-          grid-template-columns: 1fr;
-          gap: 40px;
-        }
-
-        footer {
-          flex-direction: column;
-          padding: 28px 22px;
+        .button {
+          width: 100%;
         }
       }
     </style>
@@ -383,157 +608,212 @@
 
   <body>
     <header class="site-header">
-      <a class="logo" href="#top">GO • KI • GEN</a>
+      <a class="logo" href="/ja">GO・KI・GEN TIME</a>
 
-     <nav class="menu">
-  <a href="/library">Library</a>
-  <a href="#world">World</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-  <span class="language-switch">
-    <span>JP</span>
-    <span>｜</span>
-    <a href="/">PT</a>
-  </span>
-</nav>
+      <nav class="menu" aria-label="メインメニュー">
+        <a href="#story">物語</a>
+        <a href="#library">ライブラリー</a>
+        <a href="#about">プロフィール</a>
+        <a href="/">PT</a>
+      </nav>
     </header>
 
-    <main id="top">
+    <main>
       <section class="hero">
         <div class="hero-inner">
-          <div class="eyebrow">新しい記憶が、ゆっくりと生まれていく</div>
+          <p class="eyebrow">Born in Tainai, Niigata</p>
 
-          <h1 class="brand">
-            GO • KI • GEN
+          <h1>
+            <span class="brand">GO・KI・GEN</span>
             <span class="brand-time">TIME</span>
           </h1>
 
           <p class="hero-description">
-            本、レシピ、庭、そして季節の物語を<br />
-            新潟県胎内市から丁寧に届けます
+            育てること、焼くこと、つくること。<br />
+            日々の小さな時間を大切にしながら、料理と庭、
+            そして暮らしの物語を綴っています。
           </p>
 
-          <div class="hero-signature">by Flavia Nishimura</div>
+          <p class="hero-signature">Flavia Nishimura</p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="#library">
-              最初の本を見る
-            </a>
-
-            <a class="button" href="#world">
-              世界観を見る
-            </a>
-          </div>
-
-          <div class="language-line">
-            <span>日本語</span>
-            <span>｜</span>
-            <a href="/">Português</a>
+            <a class="button" href="#library">本を見る</a>
+            <a class="button button-soft" href="/library">Library</a>
           </div>
         </div>
       </section>
 
-     
-
-          <h2 class="section-title">
-            大切に残していきたい<br />
-            本と物語
-          </h2>
-
-          <p class="section-intro">
-            育てること。<br />
-            焼くこと。<br />
-            書くこと。<br />
-            撮ること。<br />
-            季節の記憶を集めること。<br />
-            そして、いつも何かを作り続けること。
-          </p>
-<div class="cards">
-  <article class="card">
-    <div class="card-label">第一作・近日公開</div>
-
-    <div class="card-title">
-      一人のための<br />
-      小さなお菓子
-    </div>
-
-    <div class="card-text">
-      日本の季節と、一人のために丁寧にお菓子を作る静かな時間を楽しむための、一人分デザートレシピ集です。
-    </div>
-  </article>
-</div>
-        </div>
-      </section>
-
-      <section class="section" id="world">
+      <section class="section story" id="story">
         <div class="section-inner">
-          <div class="section-number">02 — The Gokigen World</div>
-
-          <h2 class="section-title">
-            食、庭、そして<br />
-            丁寧な暮らし
-          </h2>
-
-          <div class="cards">
-            <article class="card">
-              <div class="card-label">FOOD</div>
-
-              <div class="card-title">レシピ</div>
-              
-              <div class="card-text">
-                新潟県胎内市の山々に囲まれた、犬と一緒に過ごせる
-                古民家カフェ。
+          <div class="story-grid">
+            <div class="story-visual">
+              <div class="story-mark">
+                A new<br />
+                memory<br />
+                unfolding
               </div>
-            </article>
+            </div>
+
+            <div class="story-text">
+              <p class="eyebrow">Growing, baking, creating</p>
+
+              <h2>特別な日を待たない暮らし。</h2>
+
+              <p>
+                誰かが来る日だけではなく、
+                自分ひとりのためにも丁寧に料理をつくる。
+                花を飾り、好きな器を選び、
+                その日の時間を静かに味わう。
+              </p>
+
+              <p>
+                GO・KI・GEN TIMEは、
+                そんな小さな喜びを集める場所です。
+                新潟県胎内市の古民家カフェと庭から、
+                レシピや物語をお届けします。
+              </p>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section library" id="library">
+        <div class="section-inner">
+          <div class="section-heading">
+            <span class="section-number">01</span>
+            <h2>Library</h2>
+
+            <p>
+              料理を通して、自分のための時間を育てるための一冊。
+            </p>
+          </div>
+
+          <article class="book-card">
+            <div class="book-cover">
+              <div class="cover-inner">
+                <span class="cover-small">GO・KI・GEN TIME</span>
+
+                <div class="cover-title">
+                  一人のための<br />
+                  小さなお菓子
+                </div>
+
+                <span class="cover-author">Flavia Nishimura</span>
+              </div>
+            </div>
+
+            <div class="book-content">
+              <div class="book-label">The first book</div>
+
+              <h3>一人のための小さなお菓子</h3>
+
+              <p>
+                一人で過ごす時間にも、
+                きちんとお菓子をつくって楽しみたい。
+                そんな思いから生まれた、
+                小さな分量のデザートレシピ集です。
+              </p>
+
+              <p>
+                食べきれる量で、無駄を少なく。
+                特別な道具を増やさず、
+                日常の中で気軽につくれる10のレシピを収録しています。
+              </p>
+
+              <div class="book-details">
+                <div class="book-detail">
+                  <span class="detail-label">Recipes</span>
+                  <span class="detail-value">10 recipes</span>
+                </div>
+
+                <div class="book-detail">
+                  <span class="detail-label">Language</span>
+                  <span class="detail-value">日本語</span>
+                </div>
+
+                <div class="book-detail">
+                  <span class="detail-label">Theme</span>
+                  <span class="detail-value">一人分のお菓子</span>
+                </div>
+
+                <div class="book-detail">
+                  <span class="detail-label">Author</span>
+                  <span class="detail-value">Flavia Nishimura</span>
+                </div>
+              </div>
+
+              <div class="book-actions">
+                <a class="button" href="/library">本のページへ</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section philosophy">
+        <div class="section-inner">
+          <div class="quote">
+            The present<br />
+            needs no occasion.
+          </div>
+
+          <p class="quote-japanese">
+            今日という時間に、特別な理由はいりません。<br />
+            自分のために整え、つくり、味わうこと。<br />
+            それだけで、日常は少し豊かになります。
+          </p>
         </div>
       </section>
 
       <section class="section" id="about">
-        <div class="section-inner about">
-          <div>
-            <div class="section-number">03 — About</div>
-
+        <div class="section-inner">
+          <div class="about-grid">
             <div class="about-name">
               Flavia<br />
               Nishimura
             </div>
-          </div>
 
-          <div>
             <div class="about-text">
-              料理、庭、自然、そして記憶が出会う世界を作る、
-              シェフ、パン職人、ガーデナー、ストーリーテラー。
-            </div>
+              <p>
+                ブラジル生まれ、日本在住。
+                料理人、パン職人、レシピクリエイター、
+                そして新潟県胎内市にある古民家カフェ
+                「Kuma Café」のオーナーです。
+              </p>
 
-            <div class="about-small">
-              新潟県胎内市を拠点に、Kuma Caféを運営しながら
-              GO・KI・GEN TIMEを制作しています。
-              ブラジルの温かさ、日本の四季、そして丁寧に暮らすことの
-              美しさを、料理や本、庭の物語を通して表現しています。
+              <p>
+                料理、庭、古い家、季節の移ろい。
+                手を動かしながら生まれる日々の物語を、
+                本と写真と言葉で記録しています。
+              </p>
+
+              <p>
+                GO・KI・GEN TIMEは、
+                誰かを待たずに自分のための時間を楽しむ、
+                小さなきっかけを届けるための場所です。
+              </p>
             </div>
           </div>
         </div>
       </section>
-
-      <section class="contact-box" id="contact">
-        <h2>つながりを、大切に</h2>
-
-        <p>
-          本のお知らせ、コラボレーション、取材、イベント、
-          胎内市からの季節の物語について
-        </p>
-
-        <a class="button" href="mailto:hello@flavianishimura.com">
-          お問い合わせ
-        </a>
-      </section>
     </main>
 
-    <footer>
-      <span>GO • KI • GEN TIME</span>
-      <span>新潟県胎内市から</span>
-      <span>© 2026 Flavia Nishimura</span>
+    <footer class="footer">
+      <div class="footer-logo">GO・KI・GEN TIME</div>
+
+      <p class="footer-text">
+        Growing, baking, creating — from Tainai, Niigata.
+      </p>
+
+      <div class="footer-links">
+        <a href="/ja">日本語</a>
+        <a href="/">Português</a>
+        <a href="/library">Library</a>
+      </div>
+
+      <div class="copyright">
+        © 2026 FLAVIA NISHIMURA. ALL RIGHTS RESERVED.
+      </div>
     </footer>
   </body>
 </html>
