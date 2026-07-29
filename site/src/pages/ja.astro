@@ -388,7 +388,14 @@
           ),
           linear-gradient(145deg, #ead8c9, #c99676);
       }
-
+.book-cover-image {
+  display: block;
+  width: min(100%, 330px);
+  height: auto;
+  border: 1px solid rgba(74, 51, 44, 0.18);
+  box-shadow: 0 28px 60px rgba(74, 51, 44, 0.2);
+  object-fit: cover;
+}
       .cover-inner {
         display: flex;
         width: min(100%, 330px);
@@ -750,16 +757,11 @@
 
           <article class="book-card">
             <div class="book-cover">
-              <div class="cover-inner">
-                <span class="cover-small">GO・KI・GEN TIME</span>
-
-                <div class="cover-title">
-                  一人のための<br />
-                  小さなお菓子
-                </div>
-
-                <span class="cover-author">Flavia Nishimura</span>
-              </div>
+             <img
+  src="/dessertbook.png"
+  alt="Dessert Book Cover"
+  class="book-cover-image"
+/>
             </div>
 
             <div class="book-content">
