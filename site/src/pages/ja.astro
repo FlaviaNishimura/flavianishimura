@@ -30,6 +30,70 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <style>
+.editorial-story {
+  padding: 150px 30px;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.editorial-story-inner {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+}
+
+.editorial-story-label {
+  margin: 0 0 70px;
+  color: var(--accent);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.editorial-story-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: start;
+  gap: 110px;
+}
+
+.editorial-story-title h2 {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+}
+
+.editorial-story-text {
+  padding-top: 18px;
+}
+
+.editorial-story-text p {
+  margin: 0 0 34px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2.3;
+}
+
+@media (max-width: 850px) {
+  .editorial-story {
+    padding: 100px 24px;
+  }
+
+  .editorial-story-label {
+    margin-bottom: 45px;
+  }
+
+  .editorial-story-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  }
+</style>
 
     <style>
       :root {
@@ -642,41 +706,37 @@
           </div>
         </div>
       </section>
+<section class="editorial-story" id="story">
+  <div class="editorial-story-inner">
+    <p class="editorial-story-label">A new memory unfolding</p>
 
-      <section class="section story" id="story">
-        <div class="section-inner">
-          <div class="story-grid">
-            <div class="story-visual">
-              <div class="story-mark">
-                A new<br />
-                memory<br />
-                unfolding
-              </div>
-            </div>
+    <div class="editorial-story-grid">
+      <div class="editorial-story-title">
+        <h2>
+          特別な日を<br />
+          待たない暮らし。
+        </h2>
+      </div>
 
-            <div class="story-text">
-              <p class="eyebrow">Growing, baking, creating</p>
+      <div class="editorial-story-text">
+        <p>
+          誰かが来る日だけではなく、<br />
+          自分ひとりのためにも丁寧に料理をつくる。<br />
+          花を飾り、好きな器を選び、<br />
+          その日の時間を静かに味わう。
+        </p>
 
-              <h2>特別な日を待たない暮らし。</h2>
-
-              <p>
-                誰かが来る日だけではなく、
-                自分ひとりのためにも丁寧に料理をつくる。
-                花を飾り、好きな器を選び、
-                その日の時間を静かに味わう。
-              </p>
-
-              <p>
-                GO・KI・GEN TIMEは、
-                そんな小さな喜びを集める場所です。
-                新潟県胎内市の古民家カフェと庭から、
-                レシピや物語をお届けします。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+        <p>
+          GO・KI・GEN TIMEは、<br />
+          そんな小さな喜びを集める場所です。<br />
+          新潟県胎内市の古民家カフェと庭から、<br />
+          レシピや物語をお届けします。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+      
       <section class="section library" id="library">
         <div class="section-inner">
           <div class="section-heading">
