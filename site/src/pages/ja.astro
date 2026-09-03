@@ -50,19 +50,20 @@
   font-size: 17px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .editorial-story-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+align-items: center;
   gap: 110px;
 }
 
 .editorial-story-title h2 {
   margin: 0;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: clamp(48px, 7vw, 64px);
+  font-size: clamp(46px, 6vw, 60px);
   font-weight: 300;
   letter-spacing: 0.02em;
   line-height: 1.35;
@@ -78,7 +79,52 @@
   font-size: 14px;
   line-height: 2.3;
 }
+.book-about {
+  background: #f7eee7;
+  padding: 70px 40px;
+}
 
+.book-about-grid {
+  display: block;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.book-about-label {
+  display: block;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.book-about-label span {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.book-about-label h2 {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.book-about-text {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.book-about-text p {
+  margin: 0 0 24px;
+  font-size: 15px;
+  line-height: 2.1;
+}
 @media (max-width: 850px) {
   .editorial-story {
     padding: 100px 24px;
@@ -92,7 +138,54 @@
     grid-template-columns: 1fr;
     gap: 45px;
   }
-  }
+  
+
+  .book-about {
+  background: #f7eee7;
+  padding: 70px 40px;
+
+}
+
+..book-about-grid {
+  display: block;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.book-about-label {
+  display: block;
+  text-align: center;
+  margin-bottom: 35px;
+
+}
+.book-about-label span {
+  grid-column: 1 / -1;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.book-about-label h2 {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.book-about-text {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+.book-about-text p {
+  margin: 0 0 24px;
+  font-size: 15px;
+  line-height: 2.1;
+}
 </style>
 
     <style>
@@ -498,9 +591,10 @@
       }
 
       .philosophy {
-        background: var(--accent-soft);
-        text-align: center;
-      }
+  background: var(--accent-soft);
+  text-align: center;
+
+}
 
       .quote {
         width: min(100%, 850px);
@@ -756,6 +850,29 @@
               料理を通して、自分のための時間を育てるための一冊。
             </p>
           </div>
+          <section class="section book-about">
+  <div class="section-inner">
+    <div class="book-about-grid">
+      <div class="book-about-label">
+        <span>ABOUT THE BOOK</span>
+        <h2>この本について</h2>
+      </div>
+
+      <div class="book-about-text">
+        <p>
+          一人の時間にも、きちんとお菓子をつくって楽しみたい。<br />
+          そんな思いから生まれた、小さな分量のデザートレシピ集です。
+        </p>
+
+        <p>
+          食べきれる量で、無駄を少なく。<br />
+          特別な道具を増やさず、日常の中で気軽につくれる<br />
+          10のレシピを収録しています。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
           <article class="book-card">
             <div class="book-cover">
@@ -815,6 +932,8 @@
       </section>
 
       <section class="section philosophy">
+      
+
         <div class="section-inner">
           <div class="quote">
             The present<br />
@@ -831,7 +950,7 @@
 
       <section class="section" id="about">
         <div class="section-inner">
-          <div class="about-grid">
+         <div class="about-grid">
             <div class="about-name">
               Flavia<br />
               Nishimura
@@ -863,7 +982,10 @@
     </main>
 
     <footer class="footer">
-      <div class="footer-logo">GO・KI・GEN TIME</div>
+      <div class="footer-logo">
+  GO · KI · GEN<br />
+  TIME
+</div>
 
       <p class="footer-text">
         Growing, baking, creating — from Tainai, Niigata.
