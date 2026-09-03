@@ -257,6 +257,8 @@
         font-size: 22px;
         letter-spacing: 0.18em;
         text-decoration: none;
+          display: inline-block;
+  text-align: center;
 :root{
   --cream:#FAF8F3;
   --paper:#F8F5EF;
@@ -350,13 +352,38 @@ a{
           padding: 28px 22px;
         }
       }
-    </style>
+    
+    .book-feature {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 70px;
+  align-items: center;
+  max-width: 1050px;
+  margin: 70px auto 0;
+}
+
+.book-feature-cover {
+  width: 320px;
+}
+
+.book-feature-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.book-feature-content {
+  max-width: 500px;
+} 
+</style>
   </head>
 
   <body>
     <header class="site-header">
-      <a class="logo" href="#top">GO • KI • GEN</a>
-
+      <a class="logo" href="#top">
+  GO · KI · GEN<br />
+  TIME
+</a>
       <nav class="menu">
         <a href="/library">Library</a>
         <a href="#world">World</a>
@@ -411,24 +438,36 @@ a{
           </h2>
 
           <p class="section-intro">
-            A growing collection of books about food, seasons, gardens and the
-            quiet beauty found in everyday life
+            
+  A growing collection of books and stories,<br />
+  created slowly and with intention.
+
           </p>
 
           <div class="cards">
-            <article class="card">
-              <div class="card-label">Coming soon</div>
+          <article class="book-feature">
+  <div class="book-feature-cover">
+    <img
+      src="/capa.nova.en.png"
+      alt="Recipes for One book cover"
+    />
+  </div>
 
-              <div class="card-title">
-                Recipes<br />
-                for One
-              </div>
+  <div class="book-feature-content">
+    <div class="card-label">The first book</div>
 
-              <div class="card-text">
-                Elegant single-serving desserts created with care, simplicity
-                and the Japanese spirit of mottainai
-              </div>
-            </article>
+    <h3 class="book-feature-title">Recipes for One</h3>
+
+    <p class="book-feature-text">
+      A small collection of desserts made for one —
+      thoughtful portions, simple tools, and quiet moments at home.
+    </p>
+
+    <div class="book-feature-meta">
+      10 recipes · English edition
+    </div> 
+  </div>
+</article>
         </div>
         </div>
       </section>
